@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product review app</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+</head>
+    <body ng-app="ProductReview">
+        <div class="container" ng-controller="MainCtrl">
+            
+            <a href="#/home">home</a>
+            <a href="#/feature-requests">feature-requests</a>
+
+            <div data-ng-view></div>
+        </div>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/app,1,routes/js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Roundtu.it</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link href="/app/css/app.css" rel="stylesheet" />
+</head>
+    <body ng-app="ProductReview">
+        <div class="container" ng-controller="MainCtrl">
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container" id="Menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#/home" class="navbar-brand">Roundtu.it product feedback</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#/feature-requests">Feature requests</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-ng-view></div>
+        </div>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-route/angular-route.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/app,4,implementation/js/app.js"></script>
+    </body>
+</html>

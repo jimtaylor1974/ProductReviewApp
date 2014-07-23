@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82F2F255-25DE-44D0-AB64-4F9612672134}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProductReviewApp</RootNamespace>
+    <AssemblyName>ProductReviewApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.2\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app,0,start\js\app.js" />
+    <Content Include="app,2,routes,design\css\app.css" />
+    <Content Include="app,2,routes,design\img\business-1.jpg" />
+    <Content Include="app,2,routes,design\img\business-2.jpg" />
+    <Content Include="app,2,routes,design\img\business-3.jpg" />
+    <Content Include="app,2,routes,design\img\business-4.jpg" />
+    <Content Include="app,2,routes,design\img\business-5.jpg" />
+    <Content Include="app,2,routes,design\img\business-6.jpg" />
+    <Content Include="app,2,routes,design\img\business-7.jpg" />
+    <Content Include="app,2,routes,design\img\business-8.jpg" />
+    <Content Include="app,2,routes,design\js\app.js" />
+    <Content Include="app,2,routes,design\templates\feature-requests.html" />
+    <Content Include="app,2,routes,design\templates\home.html" />
+    <Content Include="app,3,routes,design,service\css\app.css" />
+    <Content Include="app,3,routes,design,service\img\business-1.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-2.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-3.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-4.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-5.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-6.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-7.jpg" />
+    <Content Include="app,3,routes,design,service\img\business-8.jpg" />
+    <Content Include="app,3,routes,design,service\js\app.js" />
+    <Content Include="app,3,routes,design,service\templates\feature-requests.html" />
+    <Content Include="app,3,routes,design,service\templates\home.html" />
+    <Content Include="app,4,implementation\css\app.css" />
+    <Content Include="app,4,implementation\img\business-1.jpg" />
+    <Content Include="app,4,implementation\img\business-2.jpg" />
+    <Content Include="app,4,implementation\img\business-3.jpg" />
+    <Content Include="app,4,implementation\img\business-4.jpg" />
+    <Content Include="app,4,implementation\img\business-5.jpg" />
+    <Content Include="app,4,implementation\img\business-6.jpg" />
+    <Content Include="app,4,implementation\img\business-7.jpg" />
+    <Content Include="app,4,implementation\img\business-8.jpg" />
+    <Content Include="app,4,implementation\templates\feature-requests.html" />
+    <Content Include="app,4,implementation\templates\feedback.html" />
+    <Content Include="app,4,implementation\templates\home.html" />
+    <Content Include="bower_components\angular-route\angular-route.js" />
+    <Content Include="bower_components\angular\angular.js" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="bower_components\jquery\dist\jquery.js" />
+    <Content Include="app\css\app.css" />
+    <Content Include="app\img\business-1.jpg" />
+    <Content Include="app\img\business-2.jpg" />
+    <Content Include="app\img\business-3.jpg" />
+    <Content Include="app\img\business-4.jpg" />
+    <Content Include="app\img\business-5.jpg" />
+    <Content Include="app\img\business-6.jpg" />
+    <Content Include="app\img\business-7.jpg" />
+    <Content Include="app\img\business-8.jpg" />
+    <Content Include="app,4,implementation\js\app.js" />
+    <Content Include="app,1,routes\js\app.js" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\templates\feature-requests.html" />
+    <Content Include="app,1,routes\templates\feature-requests.html" />
+    <Content Include="app\templates\home.html" />
+    <Content Include="app,1,routes\templates\home.html" />
+    <Content Include="design\css\app.css" />
+    <Content Include="design\feature-requests.html" />
+    <Content Include="design\img\business-1.jpg" />
+    <Content Include="design\img\business-2.jpg" />
+    <Content Include="design\img\business-3.jpg" />
+    <Content Include="design\img\business-4.jpg" />
+    <Content Include="design\img\business-5.jpg" />
+    <Content Include="design\img\business-6.jpg" />
+    <Content Include="design\img\business-7.jpg" />
+    <Content Include="design\img\business-8.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="design\home.html" />
+    <Content Include="index,4,implementation.html" />
+    <Content Include="index.html" />
+    <Content Include="index,3,routes,design,service.html" />
+    <Content Include="index,2,routes,design.html" />
+    <Content Include="index,1,routes.html" />
+    <Content Include="index,0,start.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Commands\RequestFeatureCommand.cs" />
+    <Compile Include="Commands\LeaveFeedbackCommand.cs" />
+    <Compile Include="Commands\VoteCommand.cs" />
+    <Compile Include="Controllers\FeatureController.cs" />
+    <Compile Include="Controllers\VoteController.cs" />
+    <Compile Include="Controllers\FeatureRequestsController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
+    <Compile Include="Domain\DatabaseInitializer.cs" />
+    <Compile Include="Domain\Feature.cs" />
+    <Compile Include="Queries\FeatureRequestsQuery.cs" />
+    <Compile Include="Queries\FeaturesQuery.cs" />
+    <Compile Include="Domain\Feedback.cs" />
+    <Compile Include="Queries\FeedbackQuery.cs" />
+    <Compile Include="Domain\ICommandHandler.cs" />
+    <Compile Include="Domain\RoundtuitDbContext.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include=".bowerrc" />
+    <Content Include="bower.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50571</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50078/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

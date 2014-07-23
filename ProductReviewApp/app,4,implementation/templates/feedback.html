@@ -1,0 +1,15 @@
+﻿<div>
+    <h5>{{title}}</h5>
+    <ul class="list-group">
+        <li ng-repeat="feedback in feature.feedback" class="list-group-item">{{feedback.text}}</li>
+        <li class="list-group-item">
+            <textarea class="full-width" rows="8" ng-model="feature.feedbackText"></textarea>
+            <small>{{140 - feature.feedbackText.length}} characters left</small>
+            <label><input type="checkbox" ng-model="agreement" /> I agree to the <a href="#">communtiy standards</a> regarding posts.</label>
+            <button class="btn btn-primary btn-sm pull-right" ng-click="submitFeedback(feature)" ng-disabled="feature.feedbackText.length == 0 || feature.feedbackText.length > 140 || !agreement">Add feedback</button>
+            <button class="btn btn-default btn-sm pull-right" ng-click="closeFeedback(feature)">Cancel</button>
+            &nbsp;
+            <br class="clear-both" />
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,90 @@
+﻿<div>
+    <h2>Roundtu.it Todo App feature requests.</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <p>This is the place to add feature request fro the roundtu.it app.</p>
+            <p>You can create new feature request as well as vote and add your own opiniion.</p>
+        </div>
+    </div>
+
+    <h3>Feature requests</h3>
+
+    <div class="btn-group pull-right">
+        <button type="button" class="btn btn-primary" ng-click="setOrderBy('dateCreated')" ng-disabled="orderBy == 'dateCreated'">Date created</button>
+        <button type="button" class="btn btn-primary" ng-click="setOrderBy('comments')" ng-disabled="orderBy == 'comments'">Most commented</button>
+        <button type="button" class="btn btn-primary" ng-click="setOrderBy('votes')" ng-disabled="orderBy == 'votes'">Most votes</button>
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Feature name
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    &nbsp;
+                </th>
+                <th style="width: 250px">
+                    Voting
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="feature in featureRequests">
+                <td>{{feature.name}}</td>
+                <td>
+                    {{feature.description}}
+                    <div><small class="info">{{feature.createdBy}} {{feature.createdOn | date}}</small></div>
+                </td>
+                <td>
+                    <button type="button" class="vote btn btn-primary btn-xs pull-right" ng-click="feature.leavingFeedback = !!!feature.leavingFeedback">Comments <span class="badge">{{feature.feedbackCount}}</span></button>
+                </td>
+                <td>
+
+                    <!--default primary success info warning danger-->
+                    <span ng-class="{'label label-default': feature.votes == 0, 'label label-danger': feature.votes < 0, 'label label-success': feature.votes > 0}"><span class="badge">{{feature.votes}}</span>votes</span>
+                    <button type="button" class="vote btn btn-success btn-xs pull-right" ng-click="vote(feature, 1)">Upvote <span class="glyphicon glyphicon-thumbs-up"></span></button>
+                    <button type="button" class="vote btn btn-warning btn-xs pull-right" ng-click="vote(feature, -1)">Downvote <span class="glyphicon glyphicon-thumbs-down"></span></button>
+                </td>
+            </tr>
+            <tr ng-repeat-end ng-if="feature.leavingFeedback">
+                <td colspan="4">
+                    <feedback feature="feature" title="'Comments'"></feedback>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="vote btn btn-primary pull-right" ng-click="toggleCreateNewFeatureRequest()">Create new feature request</button>
+
+    <div class="row" ng-if="showCreateNewFeatureRequest">
+        <h4>New feature request</h4>
+        <section class="col-md-8">
+            <form novalidate class="form-horizontal" role="form" name="form">
+                <div class="form-group">
+                    <label for="Name" class="col-md-2 control-label">Name</label>
+                    <div class="col-md-10">
+                        <input type="text" id="Name" class="form-control" required placeholder="Feature name" ng-model="newFeatureRequest.name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Description" class="col-md-2 control-label">Description</label>
+                    <div class="col-md-10">
+                        <textarea id="Description" class="full-width" rows="4" required placeholder="Feature description" ng-model="newFeatureRequest.description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-default pull-right" ng-click="initializeNewFeatureRequest()">Cancel</button>
+                    </div>
+                    <div class="col-md-10">
+                        <button type="button" class="btn btn-primary pull-right" ng-click="submitNewFeatureRequest()" ng-disabled="newFeatureRequest.name == '' || newFeatureRequest.description == ''">Submit request</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

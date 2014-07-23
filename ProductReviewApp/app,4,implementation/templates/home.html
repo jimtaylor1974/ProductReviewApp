@@ -1,0 +1,41 @@
+﻿<div>
+    <h2>Roundtu.it Todo App feedback.</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <p>Hello, welcome to our feedback site for "Roundtu.it Todo App".</p>
+            <p>Please help us shape the future direction and development of roundtu.it by providing your much appreciated feedback.</p>
+            <p>If there's anythinng you'd like to see in the roundtu.it app please visit the <a href="#/feature-requests">feature requests</a> section.</p>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-default pull-right" href="#/feature-requests">Feature requests &raquo;</a><br />
+        </div>
+    </div>
+    <h3>Features</h3>
+    <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="feature in features">
+            <div class="thumbnail">
+                <img ng-src="/design/img/{{feature.image}}" alt="{{feature.name}}">
+                <div class="caption">
+                    <h3>{{feature.name}}</h3>
+                    <p>{{feature.description}}</p>
+                    <p><a class="btn btn-primary" role="button" ng-click="leaveFeedback(feature)">Leave feedback <span class="badge">{{feature.feedbackCount}}</span></a></p>
+                </div>
+                <div ng-if="feature.leavingFeedback">
+                    <h5>Feedback</h5>
+                    <ul class="list-group">
+                        <li ng-repeat="feedback in feature.feedback" class="list-group-item">{{feedback.text}}</li>
+                        <li class="list-group-item">
+                            <textarea class="full-width" rows="8" ng-model="feature.feedbackText"></textarea>
+                            <small>{{140 - feature.feedbackText.length}} characters left</small>
+                            <label><input type="checkbox" ng-model="feedback.agreement" /> I agree to the <a href="#">communtiy standards</a> regarding posts.</label>
+                            <button class="btn btn-primary btn-sm pull-right" ng-click="submitFeedback(feature)" ng-disabled="feature.feedbackText.length == 0 || feature.feedbackText.length > 140 || !feedback.agreement">Add feedback</button>
+                            <button class="btn btn-default btn-sm pull-right" ng-click="closeFeedback(feature)">Cancel</button>
+                            &nbsp;
+                            <br class="clear-both" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
